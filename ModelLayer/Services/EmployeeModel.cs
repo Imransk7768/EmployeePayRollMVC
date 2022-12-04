@@ -17,6 +17,6 @@ namespace ModelLayer.Services
         public string Department { get; set; }
         public double Salary { get; set; }
         public DateTime StartDate { get; set; }
-        public string Note { get; set; }
+        public string Notes { get; set; }
     }
 }

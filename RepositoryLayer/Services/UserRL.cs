@@ -38,7 +38,7 @@ namespace RepositoryLayer.Services
                     cmd.Parameters.AddWithValue("@Department", model.Department);
                     cmd.Parameters.AddWithValue("@Salary", model.Salary);
                     cmd.Parameters.AddWithValue("@StartDate", model.StartDate);
-                    cmd.Parameters.AddWithValue("@Note", model.Note);
+                    cmd.Parameters.AddWithValue("@Note", model.Notes);
                     con.Open();
                     var result = cmd.ExecuteNonQuery();
                     con.Close();
@@ -72,7 +72,7 @@ namespace RepositoryLayer.Services
                     cmd.Parameters.AddWithValue("@Department", model.Department);
                     cmd.Parameters.AddWithValue("@Salary", model.Salary);
                     cmd.Parameters.AddWithValue("@StartDate", model.StartDate);
-                    cmd.Parameters.AddWithValue("@Note", model.Note);
+                    cmd.Parameters.AddWithValue("@Note", model.Notes);
 
                     con.Open();
                     var result = cmd.ExecuteNonQuery();
@@ -141,9 +141,9 @@ namespace RepositoryLayer.Services
                         model.Profileimage = Convert.ToString(dr["ProfileImage"]);
                         model.Gender = Convert.ToString(dr["Gender"]);
                         model.Department = Convert.ToString(dr["Department"]);
-                        model.Salary = Convert.ToInt32(dr["salary"]);
-                        model.StartDate = Convert.ToDateTime(dr["startDate"]);
-                        model.Note = Convert.ToString(dr["note"]);
+                        model.Salary = Convert.ToInt32(dr["Salary"]);
+                        model.StartDate = Convert.ToDateTime(dr["StartDate"]);
+                        model.Notes = Convert.ToString(dr["Note"]);
 
                         empList.Add(model);
                     }
@@ -174,9 +174,9 @@ namespace RepositoryLayer.Services
                         model.Profileimage = Convert.ToString(dr["ProfileImage"]);
                         model.Gender = Convert.ToString(dr["Gender"]);
                         model.Department = Convert.ToString(dr["Department"]);
-                        model.Salary = Convert.ToInt32(dr["salary"]);
-                        model.StartDate = Convert.ToDateTime(dr["startDate"]);
-                        model.Note = Convert.ToString(dr["note"]);
+                        model.Salary = Convert.ToInt32(dr["Salary"]);
+                        model.StartDate = Convert.ToDateTime(dr["StartDate"]);
+                        model.Notes = Convert.ToString(dr["Note"]);
                     }
                 }
                 return model;
