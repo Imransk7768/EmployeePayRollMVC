@@ -66,6 +66,7 @@ namespace RepositoryLayer.Services
                     SqlCommand cmd = new SqlCommand("spUpdateEmpPayroll", con);
                     cmd.CommandType = CommandType.StoredProcedure;
 
+                    cmd.Parameters.AddWithValue("@EmpId", model.EmpId);
                     cmd.Parameters.AddWithValue("@EmpName", model.EmpName);
                     cmd.Parameters.AddWithValue("@ProfileImage", model.Profileimage);
                     cmd.Parameters.AddWithValue("@Gender", model.Gender);
